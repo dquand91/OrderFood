@@ -16,6 +16,7 @@
         android:layout_centerHorizontal="true"
         android:textSize="@dimen/textsize30"
         android:textStyle="bold"
+        android:textColor="@color/colorBackGroundWhite"
         />
 
     <LinearLayout
