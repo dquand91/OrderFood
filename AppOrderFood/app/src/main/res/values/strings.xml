@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AppOrderFood</string>
+    <!--Dang Nhap-->
+    <string name="dangky">Đăng Ký</string>
+    <string name="tendangnhap">Tên đăng nhập</string>
+    <string name="matkhau">Mật khẩu</string>
+    <string name="ngaysinh">Ngày Sinh</string>
+    <string name="chungminh">CMND</string>
+    <string name="dongy">Đồng ý</string>
+    <string name="thoat">Thoát</string>
+    <string name="gioitinhnam">Nam</string>
+    <string name="gioitinhnu">Nữ</string>
+
+</resources>
