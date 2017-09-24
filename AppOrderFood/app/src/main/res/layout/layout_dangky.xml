@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="luongduongquan.com.apporderfood.MainActivity"
+    tools:context="luongduongquan.com.apporderfood.ManHinhDangKy"
     android:background="@color/colorBackGroundDangKy">
 
     <TextView
@@ -93,6 +93,7 @@
             android:background="@color/colorBackGroundWhite"
             android:drawableLeft="@drawable/idcard"
             android:drawablePadding="@dimen/padding10dp"
+            android:maxLength="8"
             android:numeric="decimal"/>
 
         <LinearLayout

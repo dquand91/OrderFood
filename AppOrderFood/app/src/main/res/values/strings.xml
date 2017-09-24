@@ -10,5 +10,10 @@
     <string name="thoat">Thoát</string>
     <string name="gioitinhnam">Nam</string>
     <string name="gioitinhnu">Nữ</string>
+    <string name="warning_tendangnhap">Vui lòng nhập tên đăng nhập</string>
+    <string name="warning_matkhau">Vui lòng nhập mật khẩu</string>
+    <string name="warning_thanhcong">Thành công</string>
+    <string name="warning_thathbai">Thất bại</string>
+
 
 </resources>
