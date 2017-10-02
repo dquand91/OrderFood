@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import luongduongquan.com.apporderfood.FragmentApp.HienThiBanAnFragment;
 import luongduongquan.com.apporderfood.Utils.LogUtils;
 
 /**
@@ -28,6 +31,7 @@ public class TrangChuActivity extends AppCompatActivity implements NavigationVie
 	NavigationView navigationView;
 	Toolbar toolbar;
 	TextView tvTenNhanVien_Navigation;
+	FragmentManager fragmentManager;
 
 
 	@Override
@@ -61,16 +65,40 @@ public class TrangChuActivity extends AppCompatActivity implements NavigationVie
 		actionBarDrawerToggle.syncState();
 
 		navigationView.setItemIconTintList(null);
+		navigationView.setNavigationItemSelectedListener(this);
+		fragmentManager = getSupportFragmentManager();
 
 
 		Intent intentFromTrangChu = getIntent();
 		String tenDangNhap = intentFromTrangChu.getStringExtra(DangNhapActivity.TAG_TenDangNhap);
 		LogUtils.trace(TAG, "tenDangNhap= " + tenDangNhap);
 		tvTenNhanVien_Navigation.setText(tenDangNhap);
+
+
+		// Để hiển thị cái Fragment danh sách bàn ăn ngây sau khi login vào
+		FragmentTransaction transHienThiBanAn = fragmentManager.beginTransaction();
+		HienThiBanAnFragment hienThiBanAnFragment = new HienThiBanAnFragment();
+		// Cái R.id.flContentTrangChu là 1 cái frameLayout
+		transHienThiBanAn.replace(R.id.flContentTrangChu, hienThiBanAnFragment);
+		transHienThiBanAn.commit();
 	}
 
 	@Override
 	public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+		int id = item.getItemId();
+		switch (id){
+			case R.id.it_trangchu:
+				FragmentTransaction transHienThiBanAn = fragmentManager.beginTransaction();
+				HienThiBanAnFragment hienThiBanAnFragment = new HienThiBanAnFragment();
+				transHienThiBanAn.replace(R.id.flContentTrangChu, hienThiBanAnFragment);
+				transHienThiBanAn.commit();
+
+				// Để set vùng chọn cho item đã được check
+				item.setChecked(true);
+				// Để đóng luôn cái Drawer lại sau khi đã chọn
+				drawerLayout.closeDrawers();
+				break;
+		}
 		return false;
 	}
 }

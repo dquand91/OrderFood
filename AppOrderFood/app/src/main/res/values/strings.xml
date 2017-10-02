@@ -26,4 +26,11 @@
     <string name="mo">Mở</string>
     <string name="dong">Đóng</string>
 
+
+    <!--Menu Item-->
+    <string name="itThemBanAn">Thêm Bàn Ăn</string>
+
+    <!--Them Ban An-->
+    <string name="hintThemBanAn">Nhập Tên Bàn Ăn</string>
+
 </resources>
