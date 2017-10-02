@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+                android:background="@color/colorGreen">
+
+
+        <TextView
+            android:id="@+id/tvDangNhap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/danngnhap"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/llEdtDangNhap"
+            android:textColor="@color/colorBackGroundWhite"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_marginBottom="@dimen/padding20dp"/>
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/logodangnhap"
+            android:layout_above="@id/llEdtDangNhap"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="-10dp"
+            />
+        <LinearLayout
+            android:id="@+id/llEdtDangNhap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            >
+            <EditText
+                android:id="@+id/edtTenDangNhap_DN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding10dp"
+                android:layout_marginLeft="@dimen/padding10dp"
+                android:layout_marginRight="@dimen/padding10dp"
+                android:layout_marginBottom="@dimen/padding10dp"
+                android:hint="@string/tendangnhap"
+                android:textColorHint="@color/colorTextHint"
+                android:background="@color/colorBackGroundWhite"
+                android:drawableLeft="@drawable/user"
+                android:drawablePadding="@dimen/padding10dp"
+                />
+
+            <EditText
+                android:id="@+id/edtMatKhau_DN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:password="true"
+                android:padding="@dimen/padding10dp"
+                android:layout_marginLeft="@dimen/padding10dp"
+                android:layout_marginRight="@dimen/padding10dp"
+                android:layout_marginBottom="@dimen/padding10dp"
+                android:hint="@string/matkhau"
+                android:textColorHint="@color/colorTextHint"
+                android:background="@color/colorBackGroundWhite"
+                android:drawableLeft="@drawable/password"
+                android:drawablePadding="@dimen/padding10dp"
+                />
+            <Button
+                android:id="@+id/btnDangNhap_DN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding10dp"
+                android:layout_marginLeft="@dimen/padding10dp"
+                android:layout_marginRight="@dimen/padding10dp"
+                android:layout_marginBottom="@dimen/padding10dp"
+                android:text="@string/danngnhap"
+                android:background="@color/colorBtnThoat"
+                android:textColor="@color/colorBackGroundWhite"
+                android:textStyle="bold"
+                />
+            <Button
+                android:id="@+id/btnDangKy_DN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding10dp"
+                android:layout_marginLeft="@dimen/padding10dp"
+                android:layout_marginRight="@dimen/padding10dp"
+                android:layout_marginBottom="@dimen/padding10dp"
+                android:text="@string/dangky"
+                android:background="@color/colorBackGroundDangKy"
+                android:textColor="@color/colorBackGroundWhite"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+
+</RelativeLayout>

@@ -70,7 +70,6 @@ public class CreateDatabase extends SQLiteOpenHelper {
             + " PRIMARY KEY ( " + TB_CHITIETGOIMON_MAGOIMON + "," + TB_CHITIETGOIMON_MAMONAN + "))";
 
 
-
     public CreateDatabase(Context context) {
         // Constructor
         super(context, "OrderFood", null, 1);
