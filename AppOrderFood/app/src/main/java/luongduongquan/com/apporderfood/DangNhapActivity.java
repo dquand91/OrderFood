@@ -24,6 +24,7 @@ public class DangNhapActivity extends AppCompatActivity implements View.OnClickL
 	Button btnDangKyDN, btnDangNhapDN;
 	EditText edtTenDangNhapDN, edtMatKhauDN;
 	NhanVienDAO nhanVienDAO;
+	public static final String TAG_TenDangNhap = "tendangnhap";
 
 	@Override
 	public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -80,7 +81,9 @@ public class DangNhapActivity extends AppCompatActivity implements View.OnClickL
 		String matKhau = edtMatKhauDN.getText().toString();
 		long check = nhanVienDAO.KiemTraDangNhap(tenDangNhap);
 		if (check != 0){
-			Toast.makeText(this,"Thanh Cong", Toast.LENGTH_SHORT).show();
+			Intent intentTrangChu = new Intent(DangNhapActivity.this, TrangChuActivity.class);
+			intentTrangChu.putExtra(TAG_TenDangNhap, tenDangNhap);
+			startActivity(intentTrangChu);
 		} else {
 			Toast.makeText(this,"!!!!!!!!!!!!!!!!!!! That Bai !!!!!!!!!!!!!!!!!!", Toast.LENGTH_SHORT).show();
 		}

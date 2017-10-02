@@ -16,5 +16,14 @@
     <string name="warning_thathbai">Thất bại</string>
     <string name="danngnhap">Đăng Nhập</string>
 
+    <!--Navigation-->
+    <string name="trangchu">Trang Chủ</string>
+    <string name="thucdon">Thực Đơn</string>
+    <string name="nhanvien">Nhân Viên</string>
+    <string name="thongke">Thống Kê</string>
+    <string name="caidat">Cài đặt</string>
+    <string name="tennhanvien">Tên nhân viên</string>
+    <string name="mo">Mở</string>
+    <string name="dong">Đóng</string>
 
 </resources>
