@@ -2,6 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorTextHint">
+    >
+
+    <GridView
+        android:id="@+id/gv_HienThiBanAn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:padding="@dimen/padding5dp">
+
+    </GridView>
 
 </LinearLayout>

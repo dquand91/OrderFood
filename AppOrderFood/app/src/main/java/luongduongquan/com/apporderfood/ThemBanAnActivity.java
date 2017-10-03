@@ -28,7 +28,7 @@ public class ThemBanAnActivity extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_them_ban_an);
+        setContentView(R.layout.layout_them_ban_an);
 
         edtThemTenBanAn = (EditText) findViewById(R.id.edtThemTenBanAn);
         btnDongY = (Button) findViewById(R.id.btnDongY_ThemBanAn);
