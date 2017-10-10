@@ -69,15 +69,33 @@ public class AdapterHienThiBanAn extends BaseAdapter implements View.OnClickList
 			viewHolder = (ViewHolder) itemView.getTag();
 		}
 		BanAnDTO itemBanAn = mListBanAn.get(i);
-		viewHolder.tenBanAn.setText(itemBanAn.getTenBan());
 		if(itemBanAn.isTinhTrang()){
-			viewHolder.imgTinhTrangBanAn.setImageResource(R.drawable.banantrue);
+			HienThiButton();
 		} else {
-			viewHolder.imgTinhTrangBanAn.setImageResource(R.drawable.banan);
+			AnButton();
 		}
+
+		viewHolder.tenBanAn.setText(itemBanAn.getTenBan());
+
+		viewHolder.imgTinhTrangBanAn.setTag(i);
+
 		viewHolder.imgTinhTrangBanAn.setOnClickListener(this);
 
 		return itemView;
+	}
+
+	private void HienThiButton(){
+		viewHolder.imgTinhTrangBanAn.setImageResource(R.drawable.banantrue);
+		viewHolder.imgHuy.setVisibility(View.VISIBLE);
+		viewHolder.imgThanhToan.setVisibility(View.VISIBLE);
+		viewHolder.imgGoiMon.setVisibility(View.VISIBLE);
+	}
+
+	private void AnButton(){
+		viewHolder.imgTinhTrangBanAn.setImageResource(R.drawable.banan);
+		viewHolder.imgHuy.setVisibility(View.INVISIBLE);
+		viewHolder.imgThanhToan.setVisibility(View.INVISIBLE);
+		viewHolder.imgGoiMon.setVisibility(View.INVISIBLE);
 	}
 
 	@Override
@@ -87,12 +105,12 @@ public class AdapterHienThiBanAn extends BaseAdapter implements View.OnClickList
 		viewHolder = (ViewHolder) ((View) view.getParent()).getTag();
 		switch (view.getId()){
 			case R.id.imgBanAn_HienThi:
-				viewHolder.imgHuy.setVisibility(View.VISIBLE);
-
-
-
-
+				int vitri = (int) view.getTag();
+				mListBanAn.get(vitri).setTinhTrang(true);
+				HienThiButton();
 				break;
+
+
 			default:
 				break;
 		}
