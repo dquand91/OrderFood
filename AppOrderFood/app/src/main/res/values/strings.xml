@@ -33,4 +33,9 @@
     <!--Them Ban An-->
     <string name="hintThemBanAn">Nhập Tên Bàn Ăn</string>
 
+    <!--Them Thuc Don-->
+    <string name="themthucdon">Thêm Thực Đơn</string>
+    <string name="hintThemMonAn">Thêm món ăn</string>
+    <string name="hintGiaTien">Giá tiền</string>
+
 </resources>
