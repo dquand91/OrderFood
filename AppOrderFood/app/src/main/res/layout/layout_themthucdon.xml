@@ -18,17 +18,20 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:layout_margin="@dimen/padding10dp">
             <EditText
                 android:id="@+id/edtThemMonAn_ThemThucDon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hintThemMonAn"/>
+                android:hint="@string/hintThemMonAn"
+                android:layout_marginBottom="@dimen/padding10dp"/>
             <EditText
                 android:id="@+id/edtGiaTien_ThemThucDon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hintGiaTien"/>
+                android:hint="@string/hintGiaTien"
+                android:layout_marginBottom="@dimen/padding10dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -36,19 +39,27 @@
                 android:weightSum="3">
                 <Spinner
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"></Spinner>
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:padding="@dimen/padding10dp"/>
                 <ImageButton
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:src="@android:drawable/ic_input_add"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding10dp"/>
             </LinearLayout>
         </LinearLayout>
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:src="@drawable/backgroundheader1"
+            android:scaleType="centerCrop"
+            android:layout_margin="@dimen/padding10dp"
+            android:paddingBottom="@dimen/padding20dp"
+            android:paddingTop="@dimen/padding20dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -60,13 +71,19 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/dongy"/>
+            android:text="@string/dongy"
+            android:textColor="@color/colorBackGroundWhite"
+            android:background="@color/colorBtnDongY"
+            android:layout_margin="@dimen/padding10dp"/>
         <Button
             android:id="@+id/btnThoat_ThemThucDon"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/thoat"/>
+            android:text="@string/thoat"
+            android:textColor="@color/colorBackGroundWhite"
+            android:background="@color/colorBtnThoat"
+            android:layout_margin="@dimen/padding10dp"/>
     </LinearLayout>
 
 </LinearLayout>

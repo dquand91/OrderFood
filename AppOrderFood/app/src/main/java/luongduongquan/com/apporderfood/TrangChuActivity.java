@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import luongduongquan.com.apporderfood.FragmentApp.HienThiBanAnFragment;
+import luongduongquan.com.apporderfood.FragmentApp.HienThiThucDonFragment;
 import luongduongquan.com.apporderfood.Utils.LogUtils;
 
 /**
@@ -92,6 +93,18 @@ public class TrangChuActivity extends AppCompatActivity implements NavigationVie
 				HienThiBanAnFragment hienThiBanAnFragment = new HienThiBanAnFragment();
 				transHienThiBanAn.replace(R.id.flContentTrangChu, hienThiBanAnFragment);
 				transHienThiBanAn.commit();
+
+				// Để set vùng chọn cho item đã được check
+				item.setChecked(true);
+				// Để đóng luôn cái Drawer lại sau khi đã chọn
+				drawerLayout.closeDrawers();
+				break;
+
+			case R.id.it_thucdon:
+				FragmentTransaction transHienThiThucDon = fragmentManager.beginTransaction();
+				HienThiThucDonFragment hienThiThucDonFragment = new HienThiThucDonFragment();
+				transHienThiThucDon.replace(R.id.flContentTrangChu, hienThiThucDonFragment);
+				transHienThiThucDon.commit();
 
 				// Để set vùng chọn cho item đã được check
 				item.setChecked(true);
