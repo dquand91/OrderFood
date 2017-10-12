@@ -39,5 +39,10 @@
     <string name="hintThemMonAn">Thêm món ăn</string>
     <string name="hintGiaTien">Giá tiền</string>
     <string name="tenmonan">Tên món ăn</string>
+    <string name="themloaithucdon">Thêm Loại Thực Đơn</string>
+    <string name="loaithucdon">Loại Thực Đơn</string>
+    <string name="tenloaithucdon">Tên Loại</string>
+
+    <string name="vuilongnhapdulieu">Vui lòng nhập dữ liệu</string>
 
 </resources>

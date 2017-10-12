@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="luongduongquan.com.apporderfood">
+          package="luongduongquan.com.apporderfood">
 
     <application
         android:allowBackup="true"
@@ -9,19 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ManHinhDangKy"></activity>
+        <activity android:name=".ManHinhDangKy"/>
         <activity android:name=".DangNhapActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".TrangChuActivity"></activity>
-        <activity android:name=".ThemThucDonActivity"></activity>
-        <activity android:name=".ThemBanAnActivity"
+        <activity android:name=".TrangChuActivity"/>
+        <activity android:name=".ThemThucDonActivity"/>
+        <activity
+            android:name=".ThemBanAnActivity"
             android:theme="@style/PopupActivity">
-
+        </activity>
+        <activity android:name=".ThemLoaiThucDonActivity"
+            android:theme="@style/PopupActivity">
         </activity>
     </application>
 
