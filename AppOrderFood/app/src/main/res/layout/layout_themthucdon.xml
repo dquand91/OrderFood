@@ -9,7 +9,7 @@
         android:layout_gravity="center"
         android:text="@string/themthucdon"
         android:textStyle="bold"
-        android:textSize="@dimen/textsize30"/>
+        android:textSize="@dimen/textsize20"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

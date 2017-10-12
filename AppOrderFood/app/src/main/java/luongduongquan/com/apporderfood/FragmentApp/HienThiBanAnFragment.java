@@ -20,6 +20,7 @@ import luongduongquan.com.apporderfood.DAO.BanAnDAO;
 import luongduongquan.com.apporderfood.DTO.BanAnDTO;
 import luongduongquan.com.apporderfood.R;
 import luongduongquan.com.apporderfood.ThemBanAnActivity;
+import luongduongquan.com.apporderfood.TrangChuActivity;
 
 /**
  * Created by User on 10/2/2017.
@@ -43,6 +44,7 @@ public class HienThiBanAnFragment extends android.support.v4.app.Fragment {
         // Phải set cái này thành True thì mới onCreateOptionsMenu và onOptionsItemSelected có tác dụng
         // cái này để enable cái Option menu lên
         setHasOptionsMenu(true);
+        ((TrangChuActivity) getActivity()).getSupportActionBar().setTitle(R.string.trangchu);
 
         gridViewHienThiBanAn = (GridView) view.findViewById(R.id.gv_HienThiBanAn);
 

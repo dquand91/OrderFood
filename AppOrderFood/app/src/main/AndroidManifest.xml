@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".TrangChuActivity"></activity>
+        <activity android:name=".ThemThucDonActivity"></activity>
         <activity android:name=".ThemBanAnActivity"
             android:theme="@style/PopupActivity">
 
