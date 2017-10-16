@@ -8,6 +8,7 @@ public class LoaiMonAnDTO {
 
 	int MaLoai;
 	String tenLoai;
+	String hinhAnh;
 
 	public int getMaLoai() {
 		return MaLoai;
@@ -23,5 +24,13 @@ public class LoaiMonAnDTO {
 
 	public void setTenLoai(String tenLoai) {
 		this.tenLoai = tenLoai;
+	}
+
+	public String getHinhAnh() {
+		return hinhAnh;
+	}
+
+	public void setHinhAnh(String hinhAnh) {
+		this.hinhAnh = hinhAnh;
 	}
 }

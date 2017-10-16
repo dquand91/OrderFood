@@ -11,5 +11,6 @@
     <color name="colorDark">#000000</color>
     <color name="colorGreen">#66a325</color>
     <color name="colorBackgroundToolBar">#faab50</color>
+    <color name="backgroundTransparentGreen">#8066a325</color>
 
 </resources>

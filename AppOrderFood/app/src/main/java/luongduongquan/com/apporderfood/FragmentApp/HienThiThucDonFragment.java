@@ -10,7 +10,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 
+import java.util.List;
+
+import luongduongquan.com.apporderfood.CustomAdapter.AdapterHienThiLoaiMonAn;
+import luongduongquan.com.apporderfood.DAO.LoaiMonAnDAO;
+import luongduongquan.com.apporderfood.DTO.LoaiMonAnDTO;
 import luongduongquan.com.apporderfood.R;
 import luongduongquan.com.apporderfood.ThemThucDonActivity;
 import luongduongquan.com.apporderfood.TrangChuActivity;
@@ -21,6 +27,10 @@ import luongduongquan.com.apporderfood.TrangChuActivity;
 
 public class HienThiThucDonFragment extends Fragment {
 
+    GridView gridView;
+    List<LoaiMonAnDTO> listMonAnDTO;
+    LoaiMonAnDAO loaiMonAnDAO;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -29,6 +39,13 @@ public class HienThiThucDonFragment extends Fragment {
         // cái này để enable cái Option menu lên
         setHasOptionsMenu(true);
         ((TrangChuActivity) getActivity()).getSupportActionBar().setTitle(R.string.thucdon);
+
+        gridView = (GridView) view.findViewById(R.id.gvHienThiThucDon);
+        loaiMonAnDAO = new LoaiMonAnDAO(getActivity());
+        listMonAnDTO = loaiMonAnDAO.layTatCaLoaiMonAn();
+        AdapterHienThiLoaiMonAn adapter = new AdapterHienThiLoaiMonAn(getActivity(), R.layout.item_loaimonan,listMonAnDTO);
+        gridView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
 
         return view;
     }
