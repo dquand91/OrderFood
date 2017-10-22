@@ -8,6 +8,7 @@ public class MonAnDTO {
 
     String TenMonAn, GiaTien, HinhAnh;
     int MaLoai;
+    int MaMonAn;
 
     public String getTenMonAn() {
         return TenMonAn;
@@ -39,5 +40,13 @@ public class MonAnDTO {
 
     public void setMaLoai(int maLoai) {
         MaLoai = maLoai;
+    }
+
+    public int getMaMonAn() {
+        return MaMonAn;
+    }
+
+    public void setMaMonAn(int maMonAn) {
+        MaMonAn = maMonAn;
     }
 }

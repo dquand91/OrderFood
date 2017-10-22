@@ -2,7 +2,11 @@ package luongduongquan.com.apporderfood.DAO;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import luongduongquan.com.apporderfood.DTO.MonAnDTO;
 import luongduongquan.com.apporderfood.Database.CreateDatabase;
@@ -36,6 +40,31 @@ public class MonAnDAO {
         } else {
             return false;
         }
+    }
+
+    public List<MonAnDTO> layDanhSachMonAnTheoLoai (int maLoai){
+        List<MonAnDTO> monAnDTOs = new ArrayList<>();
+
+
+        String truyvan = "SELECT * FROM " + CreateDatabase.TB_MONAN + " WHERE " + CreateDatabase.TB_MONAN_MALOAI + " = '" + maLoai + "' ";
+        Cursor cursor = database.rawQuery(truyvan,null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            MonAnDTO monAnDTO = new MonAnDTO();
+            monAnDTO.setHinhAnh(cursor.getString(cursor.getColumnIndex(CreateDatabase.TB_MONAN_HINHANH)));
+            monAnDTO.setTenMonAn(cursor.getString(cursor.getColumnIndex(CreateDatabase.TB_MONAN_TENMONAN)));
+            monAnDTO.setGiaTien(cursor.getString(cursor.getColumnIndex(CreateDatabase.TB_MONAN_GIATIEN)));
+            monAnDTO.setMaMonAn(cursor.getInt(cursor.getColumnIndex(CreateDatabase.TB_MONAN_MAMON)));
+            monAnDTO.setMaLoai(cursor.getInt(cursor.getColumnIndex(CreateDatabase.TB_MONAN_MALOAI)));
+            monAnDTOs.add(monAnDTO);
+
+
+
+            cursor.moveToNext();
+        }
+
+        return monAnDTOs;
+
     }
 
 }
